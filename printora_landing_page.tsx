@@ -701,12 +701,26 @@ export default function App() {
               </button>
             </div>
 
-            <div className="bg-slate-50 border border-slate-200 rounded-[24px] p-8 flex flex-col items-center justify-center mb-8 shadow-sm">
-              <div className="w-[72px] h-[72px] rounded-2xl border border-slate-200 mb-4 p-2 bg-white flex items-center justify-center shadow-sm">
-                <img src={pageData.profileImg} alt="Profile" className="w-full h-full object-contain" />
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden mb-6 shadow-sm">
+              <div className="aspect-[4/3] w-full overflow-hidden bg-slate-900 relative">
+                <img 
+                  src="./og-image.png" 
+                  alt="SEO Social Share Preview" 
+                  className="w-full h-full object-cover object-top" 
+                />
+                <span className="absolute top-2.5 right-2.5 px-2.5 py-1 bg-black/60 backdrop-blur-md rounded-lg text-[10px] text-white font-bold tracking-wide uppercase">
+                  Pratinjau Tautan
+                </span>
               </div>
-              <h4 className="text-slate-900 font-bold text-lg text-center tracking-tight">@{pageData.name.toLowerCase().replace(/\s/g, '')}</h4>
-              <p className="text-slate-500 text-sm mt-1 text-center font-medium opacity-90">{pageData.links.instagram.replace('https://www.', '')}</p>
+              <div className="p-3.5 bg-white border-t border-slate-100 flex items-center justify-between">
+                <div>
+                  <h4 className="text-slate-900 font-bold text-[14px] leading-tight">Printora</h4>
+                  <p className="text-slate-500 text-[11px] leading-tight mt-0.5">Solusi Cetak Cepat, Tepat, & Berkualitas</p>
+                </div>
+                <span className="text-[11px] font-bold text-[#0C4A8E] bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-100">
+                  Palangka Raya
+                </span>
+              </div>
             </div>
 
             <div className="flex overflow-x-auto gap-3 pb-2 no-scrollbar items-start px-1 mb-4">
